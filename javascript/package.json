@@ -1,0 +1,32 @@
+{
+  "name": "js_signed_urls",
+  "version": "1.0.0",
+  "description": "javascript(signed urls)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hezronkimutai/SignedUrls.git"
+  },
+  "keywords": [
+    "aws",
+    "salesforce",
+    "azure",
+    "signed",
+    "urls",
+    "cloud"
+  ],
+  "author": "Hezron Kimutai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hezronkimutai/SignedUrls/issues"
+  },
+  "homepage": "https://github.com/hezronkimutai/SignedUrls#readme",
+  "dependencies": {
+    "base64url": "^3.0.1",
+    "crypto": "^1.0.1"
+  }
+}
