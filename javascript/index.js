@@ -1,6 +1,6 @@
 const Jwt = require("./jwt");
 const fs = require('fs');
-const privateKey = fs.readFileSync(`key.pem`).toString('utf8');
+const privateKey = fs.readFileSync(`private_key.pem`).toString('utf8');
 
 const main = () => {
     const jwt = new Jwt({
