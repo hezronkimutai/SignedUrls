@@ -70,7 +70,7 @@ public class App {
         KeyFactory kf = KeyFactory.getInstance("RSA");
         Signature privateSignature = Signature.getInstance("SHA256withRSA");
         try{
-            //Deal with DER
+            //Deal with PEM STRING
             System.out.println("DER files handled here");
             ASN1EncodableVector v0 = new ASN1EncodableVector();
             v0.add(new ASN1ObjectIdentifier(PKCSObjectIdentifiers.rsaEncryption.getId()));
@@ -84,9 +84,8 @@ public class App {
             keySpec = new PKCS8EncodedKeySpec(realPKcs8EncodedBytes);
             privateSignature.initSign(kf.generatePrivate(keySpec));
         } catch (Exception exception){
-            //Deal with PEM
+            //Deal with DER STRING
             System.out.println("PEM files handled here");
-            realPKcs8EncodedBytes = Base64.getDecoder().decode(realPK);
             keySpec = new PKCS8EncodedKeySpec(realPKcs8EncodedBytes);
             privateSignature.initSign(kf.generatePrivate(keySpec));
         }
